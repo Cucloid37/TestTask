@@ -8,14 +8,16 @@ namespace TestTask
     public class Descriptions : ScriptableObject
     {
         [SerializeField] private AssetReference _rectangle;
-        // [SerializeField] private AssetReference _startUI; 
 
         [SerializeField] private Color[] _colors;
+        
+        // временная заглушка
+        [SerializeField] private GameObject emptyBox;
 
         public AssetReference Rectangle => _rectangle;
-        // public AssetReference StartUI => _startUI;
         
         public Color[] Colors => _colors;
+        public GameObject EmptyBox => emptyBox;
 
         public async Task<GameObject> LoadView(AssetReference reference)
         {

@@ -6,7 +6,6 @@ namespace TestTask
     public class InputController : IExecute
     {
         public event Action OnClickMouseLeft;
-        public event Action DoubleClickMouseLeft;
 
         private readonly KeysManager _inputKeys;
 
@@ -18,7 +17,8 @@ namespace TestTask
         
         public void Execute(float deltaTime)
         {
-            if (Time.timeScale == Mathf.Round(0)) return;           //ToAsk 
+            Debug.Log($"{Time.timeScale}");
+            if (Time.timeScale == Mathf.Round(0)) return;           //По идее эта проверка  
 
             _inputKeys.GetMouseRight(OnClickMouseLeft);
         }

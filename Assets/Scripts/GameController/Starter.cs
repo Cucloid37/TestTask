@@ -12,7 +12,6 @@ namespace TestTask
 
         private UpdateController _updateController;
         private MainController _mainController;
-        private GameInitialization _initialization;
 
         private void Start()
         {
